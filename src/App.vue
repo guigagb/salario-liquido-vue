@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<v-app>
+		<v-app-bar app color="primary" dark>
+			<div class="d-flex align-center">
+				<h3>Calculadora Salário Líquido</h3>
+			</div>
+		</v-app-bar>
+
+		<div class="main-conteiner">
+			<Calculadora />
+		</div>
+	</v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Calculadora from "./components/Calculadora";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+	name: "App",
+
+	components: {
+		Calculadora,
+	},
+
+	data: () => ({
+		//
+	}),
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+.main-conteiner
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	margin-top: 100px
 </style>
